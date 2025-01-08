@@ -19,6 +19,13 @@ module.exports = merge(common, {
     },
     devServer: {
         compress: true,
+        static: './dist',
+        hot: true,
+        port: 3000,
+        host: '0.0.0.0',
+        devMiddleware: {
+            writeToDisk: true,
+        },
         client: {
             overlay: {
                 errors: true,
