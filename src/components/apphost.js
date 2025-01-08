@@ -178,10 +178,6 @@ function supportsVoiceInput() {
 }
 
 function supportsFullscreen() {
-    if (browser.tv) {
-        return false;
-    }
-
     const element = document.documentElement;
     return !!(element.requestFullscreen || element.mozRequestFullScreen || element.webkitRequestFullscreen || element.msRequestFullscreen || document.createElement('video').webkitEnterFullscreen);
 }
